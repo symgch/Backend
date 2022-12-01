@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/symgch/Backend/issues"
   },
-  "homepage": "https://github.com/symgch/Backend#readme"
+  "homepage": "https://github.com/symgch/Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
