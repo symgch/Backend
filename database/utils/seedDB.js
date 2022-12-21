@@ -4,7 +4,8 @@ const seedDB = async () => {
 	const dummyEmployee = await Employee.create({
 		firstname: "Shuhei",
 		lastname: "Yamaguchi",
-		department: "Computer Science"
+		department: "Computer Science",
+		employeeId: "1"
 	});
 	const dummyEmployee2 = await Employee.create({
 		firstname: "John",
