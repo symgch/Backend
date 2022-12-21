@@ -2,7 +2,7 @@
   "name": "final-backend",
   "version": "1.0.0",
   "description": "server for final crud project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
