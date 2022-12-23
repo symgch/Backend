@@ -9,13 +9,13 @@ const { Task, Employee } = require('../database/models');
 const ash = require('express-async-handler');
 const e = require('express');
 
-/** GET ALL INSTRUCTORS */
+/** GET ALL EMPLOYEE */
 router.get('/', ash(async(req, res) => {
   let employees = await Employee.findAll({include: [Task]});
   res.status(200).json(employees);
 }));
 
-/** GET INSTRUCTOR BY ID*/
+/** GET EMPLOYEE BY ID*/
 router.get('/:id', ash(async(req, res) => {
   let employees = await Employee.findByPk(req.params.id, {include: [Task]});
   res.status(200).json(employees);
@@ -28,13 +28,13 @@ router.delete('/:id', ash(async(req, res) => {
       id: req.params.id
     }
   });
-  res.status(200).json("Instructor deleted");
+  res.status(200).json("Employee deleted");
 }));
 
 // Add new instructor
 router.post('/', ash(async(req, res) => {
-  let newEmployee = await Employee.create(req.body);
-  res.status(200).json(newEmployee);
+  let newEmployees = await Employee.create(req.body);
+  res.status(200).json(newEmployees);
 }));
 
 // Edit instructor
@@ -44,7 +44,7 @@ router.put('/:id', ash(async(req, res) => {
       id: req.params.id
     }
   });
-  let employees = await Employee.findByPk(req.params.id, {include: [Task]});
+  let employees = await Employee.findByPk(req.params.id);
   res.status(201).json(employees);
 }))
 

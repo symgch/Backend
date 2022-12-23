@@ -54,7 +54,7 @@ router.delete('/:id', function(req, res, next) {
       id: req.params.id
     }
   })
-    .then(() => res.status(200).json("Deleted a course!"))
+    .then(() => res.status(200).json("Deleted a Task!"))
     .catch(err => next(err));
 });
 
