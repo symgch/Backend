@@ -44,7 +44,7 @@ router.put('/:id', ash(async(req, res) => {
       id: req.params.id
     }
   });
-  let employees = await Employee.findByPk(req.params.id, {include: [Task]});
+  let employees = await Employee.findByPk(req.params.id);
   res.status(201).json(employees);
 }))
 
