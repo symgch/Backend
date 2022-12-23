@@ -14,7 +14,8 @@ const seedDB = async () => {
 
 	const dummyTask = await Task.create({
 		title: "Finish Assignment 3",
-        due: "12/8 11:59 PM"
+        due: "12/8 11:59 PM",
+		description: "Get through most of the porject by this date"
 	});
 
 	await dummyTask.setEmployee(dummyEmployee);

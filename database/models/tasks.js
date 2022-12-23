@@ -8,11 +8,11 @@ const Task = db.define("task", {
     allowNull: false
   },
 
-  timeslot: {
+  due: {
     type: Sequelize.STRING
   },
 
-  location: {
+  description: {
     type: Sequelize.STRING
   },
 
